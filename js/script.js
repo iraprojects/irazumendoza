@@ -44,7 +44,6 @@ const fetchFeedData = async () => {
   try {
     const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${feedUrl}`)
     const data = await response.json()
-    console.log(data);
     const items = data.items
 
     return items.map(item => {
@@ -63,7 +62,6 @@ const showMediumPosts = async () => {
   const posts = await fetchFeedData()
   const divPosts = document.body.querySelector('.container-post')
   posts.forEach((post) => {
-    console.log(post);
     const divCard = document.createElement('div')
     divCard.className = 'card card-elements'
     const h3 = document.createElement('h3')
