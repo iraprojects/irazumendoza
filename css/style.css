@@ -384,6 +384,7 @@ body {
   --state-layer-bg: var(--on-primary);
   width: 30%;
   justify-self: center;
+  justify-content: center;
 }
 
 .btn:hover:not(:focus) {
@@ -770,12 +771,19 @@ hero-content {
   #MEDIA QUERIES
 \*-----------------------------------*/
 @media (min-width: 768px) {
-  .article {
+  .article .contact-form{
     position: relative;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 0.5fr 1fr;
-    align-items: flex-start;
+    align-items: flex-start; */
+    display: grid;
+    justify-content: center;
   }
+
+  /* .contact-form{
+    display: grid;
+    justify-content: center;
+  } */
 
   .about-card,
   .primary-tabs {
